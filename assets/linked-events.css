@@ -1,0 +1,291 @@
+/* ── LinkedEvents Plugin Styles ── */
+
+.linked-events-wrap {
+    width: 100%;
+    font-family: inherit;
+}
+
+/* ── Filter ── */
+.le-upcoming-wrap .linked-events-filter {
+    margin-bottom: 28px;
+}
+
+.linked-events-filter-select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 8px 36px 8px 14px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+    cursor: pointer;
+    min-width: 160px;
+    color: #333;
+}
+
+.linked-events-filter-select:focus {
+    outline: none;
+    border-color: #2e7d5e;
+}
+
+/* ── Event List ── */
+.linked-events-list {
+    width: 100%;
+}
+
+/* ── Event Row ── */
+.le-event-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 26px 0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.le-event-row:first-child {
+    border-top: 1px solid #e0e0e0;
+}
+
+/* ── Date Column ── */
+.le-event-date {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
+    width: 150px;
+    min-width: 150px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.le-date-month {
+    display: inline !important;
+    font-size: 26px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    color: #233862 !important;
+}
+
+.le-date-day {
+    display: inline !important;
+    font-size: 26px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    color: #233862 !important;
+    line-height: 1 !important;
+}
+
+/* ── Info Column ── */
+.le-event-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.le-event-title {
+    display: block;
+    font-size: 16px;
+    font-family: var(--awb-typography1-font-family);
+    font-weight: var(--awb-typography1-font-weight, 700);
+    font-style: var(--awb-typography1-font-style);
+    color: #1a8063 !important;
+    line-height: 1.3;
+}
+
+.le-event-meta {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.le-event-cat {
+    font-weight: 600;
+    color: #333;
+}
+
+.le-event-sep {
+    color: #999;
+    margin: 0 2px;
+}
+
+.le-event-body {
+    font-style: italic;
+    color: #666;
+}
+
+/* ── Link Column ── */
+.le-event-link {
+    width: 190px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.le-view-details {
+    font-size: 12px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.07em !important;
+    text-transform: uppercase !important;
+    color: #2e7d5e !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.le-view-details:hover {
+    text-decoration: underline;
+}
+
+.le-view-details--nolink {
+    color: #999;
+    cursor: default;
+}
+
+/* ── Pagination ── */
+.linked-events-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 28px;
+}
+
+.le-page-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d5e;
+    text-decoration: none;
+    border: 1px solid #2e7d5e;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.le-page-btn:hover {
+    background: #2e7d5e;
+    color: #fff;
+    text-decoration: none;
+}
+
+.le-page-current {
+    background: #2e7d5e;
+    color: #fff;
+    border-color: #2e7d5e;
+}
+
+.le-page-next {
+    padding: 0 12px;
+}
+
+/* ── Empty State ── */
+.linked-events-empty {
+    padding: 24px 0;
+    color: #666;
+    font-size: 15px;
+}
+
+/* ── View All Button (Upcoming) ── */
+.le-view-all-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+
+/* ── Responsive ── */
+@media ( max-width: 640px ) {
+    .le-event-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 18px 0;
+    }
+
+    .le-event-date {
+        width: auto;
+        min-width: auto;
+    }
+
+    .le-event-info {
+        width: 100%;
+    }
+
+    .le-event-link {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .linked-events-pagination {
+        justify-content: center;
+    }
+}
+/* ── Controls Row (radio toggle + filter on same line) ── */
+.le-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.le-time-toggle {
+    flex: 1;
+}
+
+.linked-events-filter {
+    margin-bottom: 0;
+}
+
+/* ── Upcoming / Past Radio Toggle ── */
+.le-time-form {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.le-radio-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.le-radio-label input[type="radio"] {
+    display: none;
+}
+
+.le-radio-label.le-radio-active {
+    color: #1a8063;
+    border-bottom-color: #1a8063;
+}
+
+.le-radio-label:hover {
+    color: #1a8063;
+}
+
+@media ( max-width: 640px ) {
+    .le-controls-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
