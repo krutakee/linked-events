@@ -3,7 +3,7 @@
  * Plugin Name: LinkedEvents
  * Description: Custom events manager with full list and upcoming events shortcodes.
  * Version: 1.1.0
- * Author: Ivionics
+ * Author: Stan Han
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
